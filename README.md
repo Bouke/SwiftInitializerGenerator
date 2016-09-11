@@ -24,6 +24,8 @@ Run the extension's "Generate Swift Initializer". Voila! The code above is modif
         }
     }
 
+![Demo](docs/demo.gif)
+
 Known limitations
 -----------------
 
