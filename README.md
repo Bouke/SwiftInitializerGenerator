@@ -30,13 +30,14 @@ Installation
 ------------
 
 1. Open ``SwiftInitializerGenerator.xcodeproj``
-2. Product > Archive
-3. Right click archive > Show in Finder
-4. Right click archive > Show Package Contents
-5. Open Products, Applications
-6. Drag ``Swift Initializer Generator.app`` to your Applications folder
-7. Run ``Swift Initializer Generator.app`` and exit again.
-8. The menu-item should now be available from Xcode's Editor menu.
+2. Enable target signing for both the Application and the Source Code Extension using your own developer ID
+3. Product > Archive
+4. Right click archive > Show in Finder
+5. Right click archive > Show Package Contents
+6. Open Products, Applications
+7. Drag ``Swift Initializer Generator.app`` to your Applications folder
+8. Run ``Swift Initializer Generator.app`` and exit again.
+9. The menu-item should now be available from Xcode's Editor menu.
 
 Known limitations
 -----------------
