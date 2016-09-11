@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  HostApp
+//  SwiftInitializerGenerator
 //
 //  Created by Bouke Haarsma on 11-09-16.
 //  Copyright © 2016 Bouke Haarsma. All rights reserved.

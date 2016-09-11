@@ -1,6 +1,6 @@
 //
 //  SourceEditorCommand.swift
-//  GenerateSwiftInitializer
+//  SourceEditorExtension
 //
 //  Created by Bouke Haarsma on 11-09-16.
 //  Copyright © 2016 Bouke Haarsma. All rights reserved.
@@ -51,7 +51,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 
         let targetRange = selection.end.line + 1..<selection.end.line + 1 + lines.count
         invocation.buffer.lines.insert(lines, at: IndexSet(integersIn: targetRange))
-
+        
         completionHandler(nil)
     }
 }
