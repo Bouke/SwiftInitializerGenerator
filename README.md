@@ -26,6 +26,18 @@ Run the extension's "Generate Swift Initializer". Voila! The code above is modif
 
 ![Demo](docs/demo.gif)
 
+Installation
+------------
+
+1. Open ``SwiftInitializerGenerator.xcodeproj``
+2. Product > Archive
+3. Right click archive > Show in Finder
+4. Right click archive > Show Package Contents
+5. Open Products, Applications
+6. Drag ``Swift Initializer Generator.app`` to your Applications folder
+7. Run ``Swift Initializer Generator.app`` and exit again.
+8. The menu-item should now be available from Xcode's Editor menu.
+
 Known limitations
 -----------------
 
