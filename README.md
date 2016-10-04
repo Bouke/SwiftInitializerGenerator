@@ -7,23 +7,23 @@ Usage
 -----
 
 Select the lines with the attributes that should be included in the initializer. See below; ``>`` is the start of the selection and ``<`` is the end of the selection.
-
-    struct MyStruct {
-    >    public var a: String
-        public var b: Int<
-    }
-
+```swift
+struct MyStruct {
+>    public var a: String
+    public var b: Int<
+}
+```
 Run the extension's "Generate Swift Initializer". Voila! The code above is modified to:
-
-    struct MyStruct {
-        public var a: String
-        public var b: Int
-        public init(a: String, b: Int) {
-            self.a = a
-            self.b = b
-        }
+```swift
+struct MyStruct {
+    public var a: String
+    public var b: Int
+    public init(a: String, b: Int) {
+        self.a = a
+        self.b = b
     }
-
+}
+```
 ![Demo](docs/demo.gif)
 
 Installation
