@@ -18,7 +18,7 @@ Run the extension's "Generate Swift Initializer". Voila! The code above is modif
     struct MyStruct {
         public var a: String
         public var b: Int
-        public init(a: String, b: String) {
+        public init(a: String, b: Int) {
             self.a = a
             self.b = b
         }
