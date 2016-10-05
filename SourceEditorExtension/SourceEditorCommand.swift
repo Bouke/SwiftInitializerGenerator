@@ -9,6 +9,8 @@
 import Foundation
 import XcodeKit
 
+let accessModifiers = ["open", "public", "internal", "private", "fileprivate"]
+
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     enum Error: Swift.Error {
         case notSwiftLanguage
@@ -29,7 +31,15 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         var variables = [(String, String)]()
         for line in selectionRange.map({ invocation.buffer.lines[$0] as! String }) {
             let scanner = Scanner(string: line)
-            _ = scanner.scanString("public", into: nil) || scanner.scanString("internal", into: nil)
+
+            var weak = scanner.scanString("weak", into: nil)
+            for modifier in accessModifiers {
+                if scanner.scanString(modifier, into: nil) {
+                    break
+                }
+            }
+            weak = weak || scanner.scanString("weak", into: nil)
+
             guard scanner.scanString("let", into: nil) || scanner.scanString("var", into: nil) else {
                 return completionHandler(Error.parseError)
             }
