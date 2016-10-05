@@ -42,4 +42,4 @@ Installation
 Known limitations
 -----------------
 
-It will only parse attributes defined like ``(public|internal) (var|let) NAME: TYPE``.
+It will only parse attributes defined like ``(open|public|fileprivate|private|internal) [weak] (var|let) NAME: TYPE``.
