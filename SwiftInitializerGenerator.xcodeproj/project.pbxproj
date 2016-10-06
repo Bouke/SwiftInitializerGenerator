@@ -15,7 +15,6 @@
 		D5230B721D85661200504FFF /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5230B711D85661200504FFF /* SourceEditorCommand.swift */; };
 		D5230B761D85661200504FFF /* Generate Swift Initializer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D5230B681D85661200504FFF /* Generate Swift Initializer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D5230B7C1D85662E00504FFF /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5230B7B1D85662E00504FFF /* NSScanner+Swift.swift */; };
-		D59B7D861DA4DEFB001138E1 /* Swift Initializer Generator.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5230B541D85660400504FFF /* Swift Initializer Generator.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,16 +37,6 @@
 				D5230B761D85661200504FFF /* Generate Swift Initializer.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D59B7D851DA4DEEF001138E1 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = /Applications;
-			dstSubfolderSpec = 0;
-			files = (
-				D59B7D861DA4DEFB001138E1 /* Swift Initializer Generator.app in CopyFiles */,
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -155,7 +144,6 @@
 				D5230B511D85660400504FFF /* Frameworks */,
 				D5230B521D85660400504FFF /* Resources */,
 				D5230B7A1D85661200504FFF /* Embed App Extensions */,
-				D59B7D851DA4DEEF001138E1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -460,7 +448,6 @@
 				D5230B631D85660400504FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		D5230B771D85661200504FFF /* Build configuration list for PBXNativeTarget "SourceEditorExtension" */ = {
 			isa = XCConfigurationList;
@@ -469,7 +456,6 @@
 				D5230B791D85661200504FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
