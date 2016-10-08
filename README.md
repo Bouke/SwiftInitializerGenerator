@@ -37,7 +37,8 @@ Installation
 6. Open Products, Applications
 7. Drag ``Swift Initializer Generator.app`` to your Applications folder
 8. Run ``Swift Initializer Generator.app`` and exit again.
-9. The menu-item should now be available from Xcode's Editor menu.
+9. Go to System Preferences -> Extensions -> Xcode Source Editor and enable the extension
+10. The menu-item should now be available from Xcode's Editor menu.
 
 Known limitations
 -----------------
