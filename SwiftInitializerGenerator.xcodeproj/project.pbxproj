@@ -15,6 +15,10 @@
 		D5230B721D85661200504FFF /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5230B711D85661200504FFF /* SourceEditorCommand.swift */; };
 		D5230B761D85661200504FFF /* Generate Swift Initializer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D5230B681D85661200504FFF /* Generate Swift Initializer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D5230B7C1D85662E00504FFF /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5230B7B1D85662E00504FFF /* NSScanner+Swift.swift */; };
+		D55EA0A11E0A5659005472E8 /* SIG.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EA0A01E0A5659005472E8 /* SIG.swift */; };
+		D55EA0B71E0A568E005472E8 /* SwiftInitializerGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EA0B61E0A568E005472E8 /* SwiftInitializerGeneratorTests.swift */; };
+		D55EA0BE1E0A5695005472E8 /* SIG.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55EA0A01E0A5659005472E8 /* SIG.swift */; };
+		D55EA0BF1E0A6030005472E8 /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5230B7B1D85662E00504FFF /* NSScanner+Swift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +28,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = D5230B671D85661200504FFF;
 			remoteInfo = SourceEditorExtension;
+		};
+		D55EA0B91E0A568E005472E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5230B4C1D85660400504FFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5230B531D85660400504FFF;
+			remoteInfo = SwiftInitializerGenerator;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -54,6 +65,10 @@
 		D5230B711D85661200504FFF /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		D5230B731D85661200504FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5230B7B1D85662E00504FFF /* NSScanner+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSScanner+Swift.swift"; sourceTree = "<group>"; };
+		D55EA0A01E0A5659005472E8 /* SIG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIG.swift; sourceTree = "<group>"; };
+		D55EA0B41E0A568E005472E8 /* SwiftInitializerGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftInitializerGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55EA0B61E0A568E005472E8 /* SwiftInitializerGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftInitializerGeneratorTests.swift; sourceTree = "<group>"; };
+		D55EA0B81E0A568E005472E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +87,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D55EA0B11E0A568E005472E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +102,7 @@
 			children = (
 				D5230B561D85660400504FFF /* SwiftInitializerGenerator */,
 				D5230B6C1D85661200504FFF /* SourceEditorExtension */,
+				D55EA0B51E0A568E005472E8 /* SwiftInitializerGeneratorTests */,
 				D5230B691D85661200504FFF /* Frameworks */,
 				D5230B551D85660400504FFF /* Products */,
 			);
@@ -90,6 +113,7 @@
 			children = (
 				D5230B541D85660400504FFF /* Swift Initializer Generator.app */,
 				D5230B681D85661200504FFF /* Generate Swift Initializer.appex */,
+				D55EA0B41E0A568E005472E8 /* SwiftInitializerGeneratorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +145,7 @@
 				D5230B731D85661200504FFF /* Info.plist */,
 				D5230B6D1D85661200504FFF /* Supporting Files */,
 				D5230B7B1D85662E00504FFF /* NSScanner+Swift.swift */,
+				D55EA0A01E0A5659005472E8 /* SIG.swift */,
 			);
 			path = SourceEditorExtension;
 			sourceTree = "<group>";
@@ -131,6 +156,15 @@
 				D5230B6E1D85661200504FFF /* SourceEditorExtension.entitlements */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D55EA0B51E0A568E005472E8 /* SwiftInitializerGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D55EA0B61E0A568E005472E8 /* SwiftInitializerGeneratorTests.swift */,
+				D55EA0B81E0A568E005472E8 /* Info.plist */,
+			);
+			path = SwiftInitializerGeneratorTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,13 +206,31 @@
 			productReference = D5230B681D85661200504FFF /* Generate Swift Initializer.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
+		D55EA0B31E0A568E005472E8 /* SwiftInitializerGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D55EA0BB1E0A568E005472E8 /* Build configuration list for PBXNativeTarget "SwiftInitializerGeneratorTests" */;
+			buildPhases = (
+				D55EA0B01E0A568E005472E8 /* Sources */,
+				D55EA0B11E0A568E005472E8 /* Frameworks */,
+				D55EA0B21E0A568E005472E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D55EA0BA1E0A568E005472E8 /* PBXTargetDependency */,
+			);
+			name = SwiftInitializerGeneratorTests;
+			productName = SwiftInitializerGeneratorTests;
+			productReference = D55EA0B41E0A568E005472E8 /* SwiftInitializerGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D5230B4C1D85660400504FFF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Bouke Haarsma";
 				TargetAttributes = {
@@ -191,6 +243,12 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = GB42FB575L;
 						ProvisioningStyle = Automatic;
+					};
+					D55EA0B31E0A568E005472E8 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = GB42FB575L;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D5230B531D85660400504FFF;
 					};
 				};
 			};
@@ -209,6 +267,7 @@
 			targets = (
 				D5230B531D85660400504FFF /* SwiftInitializerGenerator */,
 				D5230B671D85661200504FFF /* SourceEditorExtension */,
+				D55EA0B31E0A568E005472E8 /* SwiftInitializerGeneratorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +283,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D5230B661D85661200504FFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55EA0B21E0A568E005472E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -248,6 +314,17 @@
 				D5230B7C1D85662E00504FFF /* NSScanner+Swift.swift in Sources */,
 				D5230B701D85661200504FFF /* SourceEditorExtension.swift in Sources */,
 				D5230B721D85661200504FFF /* SourceEditorCommand.swift in Sources */,
+				D55EA0A11E0A5659005472E8 /* SIG.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55EA0B01E0A568E005472E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55EA0BF1E0A6030005472E8 /* NSScanner+Swift.swift in Sources */,
+				D55EA0B71E0A568E005472E8 /* SwiftInitializerGeneratorTests.swift in Sources */,
+				D55EA0BE1E0A5695005472E8 /* SIG.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +335,11 @@
 			isa = PBXTargetDependency;
 			target = D5230B671D85661200504FFF /* SourceEditorExtension */;
 			targetProxy = D5230B741D85661200504FFF /* PBXContainerItemProxy */;
+		};
+		D55EA0BA1E0A568E005472E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5230B531D85660400504FFF /* SwiftInitializerGenerator */;
+			targetProxy = D55EA0B91E0A568E005472E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -429,6 +511,40 @@
 			};
 			name = Release;
 		};
+		D55EA0BC1E0A568E005472E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GB42FB575L;
+				INFOPLIST_FILE = SwiftInitializerGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.boukehaarsma.SwiftInitializerGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Initializer Generator.app/Contents/MacOS/Swift Initializer Generator";
+			};
+			name = Debug;
+		};
+		D55EA0BD1E0A568E005472E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GB42FB575L;
+				INFOPLIST_FILE = SwiftInitializerGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.boukehaarsma.SwiftInitializerGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Initializer Generator.app/Contents/MacOS/Swift Initializer Generator";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -448,12 +564,22 @@
 				D5230B631D85660400504FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5230B771D85661200504FFF /* Build configuration list for PBXNativeTarget "SourceEditorExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5230B781D85661200504FFF /* Debug */,
 				D5230B791D85661200504FFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D55EA0BB1E0A568E005472E8 /* Build configuration list for PBXNativeTarget "SwiftInitializerGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55EA0BC1E0A568E005472E8 /* Debug */,
+				D55EA0BD1E0A568E005472E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
