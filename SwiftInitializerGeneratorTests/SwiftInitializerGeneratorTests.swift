@@ -11,7 +11,7 @@ import XCTest
 class SwiftInitializerGeneratorTests: XCTestCase {
     func assert(input: [String], output: [String], file: StaticString = #file, line: UInt = #line) {
         do {
-            let lines = try generate(selection: input, tabWidth: 4, indentationWidth: 4)
+            let lines = try generate(selection: input, tabWidth: 4, indentationWidth: 0)
             if(lines != output) {
                 XCTFail("Output is not correct; expected:\n\(output.joined(separator: "\n"))\n\ngot:\n\(lines.joined(separator: "\n"))", file: file, line: line)
             }
@@ -27,10 +27,10 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "let b: Int"
             ],
             output: [
-                "    public init(a: Int, b: Int) {",
-                "        self.a = a",
-                "        self.b = b",
-                "    }"
+                "public init(a: Int, b: Int) {",
+                "    self.a = a",
+                "    self.b = b",
+                "}"
             ])
     }
 
@@ -41,10 +41,8 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 ""
             ],
             output: [
-                "    public init(a: Int, b: Int) {",
-                "        self.a = a",
-                "        self.b = b",
-                "    }"
+                "public init() {",
+                "}"
             ])
     }
 
@@ -56,10 +54,10 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "let b: Int"
             ],
             output: [
-                "    public init(a: Int, b: Int) {",
-                "        self.a = a",
-                "        self.b = b",
-                "    }"
+                "public init(a: Int, b: Int) {",
+                "    self.a = a",
+                "    self.b = b",
+                "}"
             ])
     }
 
@@ -70,10 +68,10 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "private let b: Int"
             ],
             output: [
-                "    public init(a: Int, b: Int) {",
-                "        self.a = a",
-                "        self.b = b",
-                "    }"
+                "public init(a: Int, b: Int) {",
+                "    self.a = a",
+                "    self.b = b",
+                "}"
             ])
     }
 
@@ -84,10 +82,10 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "public private(set) let b: Int"
             ],
             output: [
-                "    public init(a: Int, b: Int) {",
-                "        self.a = a",
-                "        self.b = b",
-                "    }"
+                "public init(a: Int, b: Int) {",
+                "    self.a = a",
+                "    self.b = b",
+                "}"
             ])
     }
 
@@ -105,10 +103,11 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "let c: IBOutlet!"
             ],
             output: [
-                "    public init(a: Int, b: Int) {",
-                "        self.a = a",
-                "        self.b = b",
-                "    }"
+                "public init(a: Int, b: Int, c: IBOutlet!) {",
+                "    self.a = a",
+                "    self.b = b",
+                "    self.c = c",
+                "}"
             ])
     }
 }

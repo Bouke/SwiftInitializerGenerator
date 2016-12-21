@@ -29,10 +29,17 @@ func generate(selection: [String], tabWidth: Int, indentationWidth: Int) throws 
                 break
             }
         }
+        for modifier in accessModifiers {
+            if scanner.scanString(modifier, into: nil) {
+                guard let _ = scanner.scanUpTo(")"), let _ = scanner.scanString(")") else {
+                    throw SIGError.parseError
+                }
+            }
+        }
         weak = weak || scanner.scanString("weak", into: nil)
 
         guard scanner.scanString("let", into: nil) || scanner.scanString("var", into: nil) else {
-            throw SIGError.parseError
+            continue
         }
         guard let variableName = scanner.scanUpTo(":"),
             scanner.scanString(":", into: nil),
