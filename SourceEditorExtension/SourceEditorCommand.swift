@@ -17,20 +17,34 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
             return completionHandler(SIGError.noSelection)
         }
-        let selectionRange = selection.start.line...selection.end.line
-        let selectedText = selectionRange.map({ invocation.buffer.lines[$0] as! String })
 
-        let lines: [String]
+        print(selection.start.line, selection.start.column)
+        print(selection.end.line, selection.end.column)
+
+        let selectedText: [String]
+        if selection.start.line == selection.end.line {
+            selectedText = [String(
+                (invocation.buffer.lines[selection.start.line] as! String).utf8
+                    .prefix(selection.end.column)
+                    .dropFirst(selection.start.column)
+                )!]
+        } else {
+            selectedText = [String((invocation.buffer.lines[selection.start.line] as! String).utf8.dropFirst(selection.start.column))!]
+                + ((selection.start.line+1)..<selection.end.line).map { invocation.buffer.lines[$0] as! String }
+                + [String((invocation.buffer.lines[selection.end.line] as! String).utf8.prefix(selection.end.column))!]
+        }
+
+        let initializer: [String]
         do {
-            lines = try generate(selection: selectedText,
-                                 tabWidth: invocation.buffer.tabWidth,
-                                 indentationWidth: invocation.buffer.indentationWidth)
+            initializer = try generate(selection: selectedText,
+                                       tabWidth: invocation.buffer.tabWidth,
+                                       indentationWidth: invocation.buffer.indentationWidth)
         } catch {
             return completionHandler(error)
         }
 
-        let targetRange = selection.end.line + 1..<selection.end.line + 1 + lines.count
-        invocation.buffer.lines.insert(lines, at: IndexSet(integersIn: targetRange))
+        let targetRange = selection.end.line + 1..<selection.end.line + 1 + initializer.count
+        invocation.buffer.lines.insert(initializer, at: IndexSet(integersIn: targetRange))
         
         completionHandler(nil)
     }
