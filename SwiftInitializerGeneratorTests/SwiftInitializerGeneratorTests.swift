@@ -110,4 +110,18 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "}"
             ])
     }
+  
+    func testDynamicVar() {
+        assert(
+            input: ["dynamic var hello: String",
+                    "dynamic var a: Int?",
+                    "var b: Float"],
+            output: [
+                "public init(hello: String, a: Int?, b: Float) {",
+                "    self.hello = hello",
+                "    self.a = a",
+                "    self.b = b",
+                "}"
+            ])
+    }
 }

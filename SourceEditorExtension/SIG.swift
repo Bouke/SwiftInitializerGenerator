@@ -38,7 +38,7 @@ func generate(selection: [String], tabWidth: Int, indentationWidth: Int) throws 
         }
         weak = weak || scanner.scanString("weak", into: nil)
 
-        guard scanner.scanString("let", into: nil) || scanner.scanString("var", into: nil) else {
+        guard scanner.scanString("let", into: nil) || scanner.scanString("var", into: nil) || scanner.scanString("dynamic var", into: nil) else {
             continue
         }
         guard let variableName = scanner.scanUpTo(":"),
