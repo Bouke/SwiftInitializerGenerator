@@ -29,16 +29,20 @@ struct MyStruct {
 Installation
 ------------
 
+1. On OS X 10.11 El Capitan, run the following command and restart your Mac:
+
+        sudo /usr/libexec/xpccachectl
+
 1. Open ``SwiftInitializerGenerator.xcodeproj``
-2. Enable target signing for both the Application and the Source Code Extension using your own developer ID
-3. Product > Archive
-4. Right click archive > Show in Finder
-5. Right click archive > Show Package Contents
-6. Open Products, Applications
-7. Drag ``Swift Initializer Generator.app`` to your Applications folder
-8. Run ``Swift Initializer Generator.app`` and exit again.
-9. Go to System Preferences -> Extensions -> Xcode Source Editor and enable the extension
-10. The menu-item should now be available from Xcode's Editor menu.
+1. Enable target signing for both the Application and the Source Code Extension using your own developer ID
+1. Product > Archive
+1. Right click archive > Show in Finder
+1. Right click archive > Show Package Contents
+1. Open Products, Applications
+1. Drag ``Swift Initializer Generator.app`` to your Applications folder
+1. Run ``Swift Initializer Generator.app`` and exit again.
+1. Go to System Preferences -> Extensions -> Xcode Source Editor and enable the extension
+1. The menu-item should now be available from Xcode's Editor menu.
 
 Known limitations
 -----------------
