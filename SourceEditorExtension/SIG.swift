@@ -49,7 +49,7 @@ func generate(selection: [String], tabWidth: Int, indentationWidth: Int) throws 
         variables.append((variableName, variableType))
     }
 
-    let arguments = variables.map { "\($0.0): \($0.1)" }.joined(separator: ", ")
+    let arguments = variables.map { "\($0.0): \(addEscapingAttributeIfNeeded(to: $0.1))" }.joined(separator: ", ")
 
     let indentExpressions = String(repeating: " ", count: tabWidth)
     let expressions = variables.map { "\(indentExpressions)self.\($0.0) = \($0.0)" }
@@ -58,4 +58,36 @@ func generate(selection: [String], tabWidth: Int, indentationWidth: Int) throws 
     let lines = (["public init(\(arguments)) {"] + expressions + ["}"]).map { "\(indentLines)\($0)" }
 
     return lines
+}
+
+private func addEscapingAttributeIfNeeded(to typeString: String) -> String {
+    let predicate = NSPredicate(format: "SELF MATCHES %@", "\\(.*\\)->.*")
+    if predicate.evaluate(with: typeString.replacingOccurrences(of: " ", with: "")),
+        !isOptional(typeString: typeString) {
+        return "@escaping " + typeString
+    } else {
+        return typeString
+    }
+}
+
+private func isOptional(typeString: String) -> Bool {
+    guard typeString.hasSuffix("!") || typeString.hasSuffix("?") else {
+        return false
+    }
+    var balance = 0
+    var indexOfClosingBraceMatchingFirstOpenBrace: Int?
+
+    for (index, character) in typeString.enumerated() {
+        if character == "(" {
+            balance += 1
+        } else if character == ")" {
+            balance -= 1
+        }
+        if balance == 0 {
+            indexOfClosingBraceMatchingFirstOpenBrace = index
+            break
+        }
+    }
+
+    return indexOfClosingBraceMatchingFirstOpenBrace == typeString.characters.count - 2
 }

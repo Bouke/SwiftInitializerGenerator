@@ -124,4 +124,36 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "}"
             ])
     }
+
+    func testEscapingClosure() {
+        assert(
+            input: [
+                "let a: (String) -> Int?",
+                "let b: () -> () -> Void",
+                "let c: ((String, Int))->()",
+            ],
+            output: [
+                "public init(a: @escaping (String) -> Int?, b: @escaping () -> () -> Void, c: @escaping ((String, Int))->()) {",
+                "    self.a = a",
+                "    self.b = b",
+                "    self.c = c",
+                "}"
+            ])
+    }
+
+    func testNoEscapingAttribute() {
+        assert(
+            input: [
+                "let a: (() -> Void)?",
+                "let b: [() -> Void]",
+                "let c: (()->())!"
+            ],
+            output: [
+                "public init(a: (() -> Void)?, b: [() -> Void], c: (()->())!) {",
+                "    self.a = a",
+                "    self.b = b",
+                "    self.c = c",
+                "}"
+            ])
+    }
 }
