@@ -1,7 +1,7 @@
 Swift Initializer Generator
 ===========================
 
-This Xcode 8 Source Code Extension will generate a Swift initializer based on the lines you've selected. Handy if you made a struct public and now you have to provide the initializer implementation yourself.
+This Xcode Source Code Extension will generate a Swift initializer based on the lines you've selected. Handy if you made a struct public and now you have to provide the initializer implementation yourself.
 
 Usage
 -----
