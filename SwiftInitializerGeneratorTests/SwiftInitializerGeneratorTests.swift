@@ -11,7 +11,7 @@ import XCTest
 class SwiftInitializerGeneratorTests: XCTestCase {
     func assert(input: [String], output: [String], file: StaticString = #file, line: UInt = #line) {
         do {
-            let lines = try generate(selection: input, tabWidth: 4, indentationWidth: 0)
+            let lines = try generate(selection: input, indentation: "    ", leadingIndent: "")
             if(lines != output) {
                 XCTFail("Output is not correct; expected:\n\(output.joined(separator: "\n"))\n\ngot:\n\(lines.joined(separator: "\n"))", file: file, line: line)
             }

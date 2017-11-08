@@ -17,7 +17,7 @@ enum SIGError: Swift.Error {
 
 let accessModifiers = ["open", "public", "internal", "private", "fileprivate"]
 
-func generate(selection: [String], tabWidth: Int, indentationWidth: Int) throws -> [String] {
+func generate(selection: [String], indentation: String, leadingIndent: String) throws -> [String] {
     var variables = [(String, String)]()
 
     for line in selection {
@@ -51,11 +51,9 @@ func generate(selection: [String], tabWidth: Int, indentationWidth: Int) throws 
 
     let arguments = variables.map { "\($0.0): \(addEscapingAttributeIfNeeded(to: $0.1))" }.joined(separator: ", ")
 
-    let indentExpressions = String(repeating: " ", count: tabWidth)
-    let expressions = variables.map { "\(indentExpressions)self.\($0.0) = \($0.0)" }
+    let expressions = variables.map { "\(indentation)self.\($0.0) = \($0.0)" }
 
-    let indentLines = String(repeating: " ", count: indentationWidth)
-    let lines = (["public init(\(arguments)) {"] + expressions + ["}"]).map { "\(indentLines)\($0)" }
+    let lines = (["public init(\(arguments)) {"] + expressions + ["}"]).map { "\(leadingIndent)\($0)" }
 
     return lines
 }
