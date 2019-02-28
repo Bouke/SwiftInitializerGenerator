@@ -46,7 +46,12 @@ func generate(selection: [String], indentation: String, leadingIndent: String) t
             let variableType = scanner.scanUpTo("\n") else {
                 throw SIGError.parseError
         }
-        variables.append((variableName, variableType))
+        
+        // In case multiple variables defined in a line.
+        let variableNames = variableName.components(separatedBy: ",")
+        for vname in variableNames {
+            variables.append((vname.trimmingCharacters(in: .whitespaces), variableType))
+        }
     }
 
     let arguments = variables.map { "\($0.0): \(addEscapingAttributeIfNeeded(to: $0.1))" }.joined(separator: ", ")
