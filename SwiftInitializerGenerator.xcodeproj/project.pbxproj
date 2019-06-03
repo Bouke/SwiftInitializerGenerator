@@ -524,7 +524,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.boukehaarsma.SwiftInitializerGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Initializer Generator.app/Contents/MacOS/Swift Initializer Generator";
 			};
 			name = Debug;
@@ -541,7 +541,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.boukehaarsma.SwiftInitializerGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Initializer Generator.app/Contents/MacOS/Swift Initializer Generator";
 			};
 			name = Release;
