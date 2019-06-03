@@ -87,5 +87,5 @@ private func isOptional(typeString: String) -> Bool {
         }
     }
 
-    return indexOfClosingBraceMatchingFirstOpenBrace == typeString.characters.count - 2
+    return indexOfClosingBraceMatchingFirstOpenBrace == typeString.count - 2
 }
