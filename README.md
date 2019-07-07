@@ -38,7 +38,6 @@ Installation
 1. Product > Archive
 1. Right click archive > Show in Finder
 1. Right click archive > Show Package Contents
-1. Open Products, Applications
 1. Drag ``Swift Initializer Generator.app`` to your Applications folder
 1. Run ``Swift Initializer Generator.app`` and exit again.
 1. Go to System Preferences -> Extensions -> Xcode Source Editor and enable the extension
