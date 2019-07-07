@@ -21,7 +21,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     }
 
     private func generateInitializer(invocation: XCSourceEditorCommandInvocation) throws {
-        guard invocation.buffer.contentUTI == "public.swift-source" else {
+        guard ["public.swift-source", "com.apple.dt.playground"].contains(invocation.buffer.contentUTI) else {
             throw SIGError.notSwiftLanguage
         }
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
