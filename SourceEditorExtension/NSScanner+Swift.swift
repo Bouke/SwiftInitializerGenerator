@@ -152,7 +152,7 @@ extension Scanner {
         return nil
     }
 
-    typealias Position = (line: Range<String.CharacterView.Index>, row: Int, pos: Int)
+    typealias Position = (line: Range<String.Index>, row: Int, pos: Int)
     var position: Position {
         let index = string.index(string.startIndex, offsetBy: scanLocation)
         var head = string.startIndex..<string.startIndex

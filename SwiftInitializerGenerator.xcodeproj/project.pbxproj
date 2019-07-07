@@ -257,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -457,7 +458,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.webatom.SwiftInitializerGenerator;
 				PRODUCT_NAME = "Swift Initializer Generator";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -473,7 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.webatom.SwiftInitializerGenerator;
 				PRODUCT_NAME = "Swift Initializer Generator";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -490,7 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.webatom.SwiftInitializerGenerator.SourceEditorExtension;
 				PRODUCT_NAME = "Generate Swift Initializer";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -507,7 +508,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.webatom.SwiftInitializerGenerator.SourceEditorExtension;
 				PRODUCT_NAME = "Generate Swift Initializer";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -523,7 +524,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.boukehaarsma.SwiftInitializerGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Initializer Generator.app/Contents/MacOS/Swift Initializer Generator";
 			};
 			name = Debug;
@@ -540,7 +541,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.boukehaarsma.SwiftInitializerGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift Initializer Generator.app/Contents/MacOS/Swift Initializer Generator";
 			};
 			name = Release;
@@ -582,6 +583,7 @@
 				D55EA0BD1E0A568E005472E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
